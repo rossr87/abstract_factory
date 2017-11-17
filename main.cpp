@@ -3,6 +3,7 @@
 #include "Pizza.h"
 #include "PizzaStore.h"
 #include "NYStylePizzaStore.h"
+#include "ChicagoStylePizzaStore.h"
 
 using namespace std;
 
@@ -21,7 +22,13 @@ int main()
     PizzaStore *joeys_pizza_joint = new NYStylePizzaStore();
     Pizza *mojos_pizza = joeys_pizza_joint->order_pizza("cheese");
 
-    cout << "Here you go Mojo: " << mojos_pizza->get_name() << endl;
+    cout << "Cheese Pizza for Mojo: " << mojos_pizza->get_name() << endl;
+
+    PizzaStore *tonys_pizza_joint = new ChicagoStylePizzaStore();
+    Pizza *louis_pizza = tonys_pizza_joint->order_pizza("cheese");
+
+    cout << "Cheese Pizza for Louis: " << louis_pizza->get_name() << endl;
+
 
    /*
     * Now let's order a pizza.
