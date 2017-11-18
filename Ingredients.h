@@ -1,6 +1,9 @@
 #ifndef INGREDIENTS_H_INCLUDED
 #define INGREDIENTS_H_INCLUDED
 
+#include "Clam.h"
+#include "FreshClam.h"
+#include "FrozenClam.h"
 #include "Cheese.h"
 #include "ReggianoCheese.h"
 #include "MozarellaCheese.h"

@@ -16,6 +16,7 @@ private:
      */
 
 protected:
+    Clam *clam;
     Cheese *cheese;
     Dough *dough;
     Sauce *sauce;

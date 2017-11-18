@@ -7,6 +7,7 @@ using std::cout;
 using std::endl;
 
 class PlumTomatoSauce : public Sauce {
+public:
     PlumTomatoSauce() {cout << "Plum Tomato Sauce !" << endl;}
 };
 

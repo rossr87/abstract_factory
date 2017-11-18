@@ -11,14 +11,17 @@ public:
     ~NYPizzaIngredientFactory() {
         cout << "NYPizzaIngredientFactory destroyed!" << endl;
     }
+    Clam *create_clam() override {
+        return new FreshClam();
+    }
     Cheese* create_cheese() override {
-        return new ReggianoCheese();
+        return new MozarellaCheese();
     }
     Dough* create_dough() override {
-        return new ThinCrustDough();
+        return new ThickCrustDough();
     }
     Sauce* create_sauce() override {
-        return new MarinaraSauce();
+        return new PlumTomatoSauce();
     }
 };
 

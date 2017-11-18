@@ -11,6 +11,9 @@ public:
     ~ChicagoPizzaIngredientFactory() {
         cout << "ChicagoPizzaIngredientFactory destroyed!" << endl;
     }
+    Clam* create_clam() override {
+        return new FrozenClam();
+    }
     Cheese* create_cheese() override {
         return new ReggianoCheese();
     }

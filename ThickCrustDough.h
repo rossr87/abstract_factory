@@ -7,6 +7,7 @@ using std::cout;
 using std::endl;
 
 class ThickCrustDough : public Dough {
+public:
     ThickCrustDough() {cout << "Thick Crust Dough!" << endl;}
 };
 
