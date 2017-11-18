@@ -4,8 +4,8 @@
 #include "Pizza.h"
 #include "FreshClam.h"
 
+class ClamPizza : public Pizza {
 public:
-    ClamPizza() { cout << "ClamPizza Creator" << endl;}
     ~ClamPizza() { cout << "ClamPizza Destroyed!" << endl;}
     /*
      * Let's not engage in copying around loads of ingredient factories.

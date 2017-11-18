@@ -38,12 +38,10 @@ class ChicagoStylePizzaStore : public PizzaStore {
             client_pizza = new CheesePizza(chicago_ingredient_factory);
             client_pizza->set_name("Chicago Style Cheese Pizza");
         }
-        /*
-        else if {type == "clam"} {
-            client_pizza = new ClamPizza(ny_ingredient_factory);
-            client_pizza->set_name("New York Style Cheese Pizza");
+        else if (type == "clam") {
+            client_pizza = new ClamPizza(chicago_ingredient_factory);
+            client_pizza->set_name("Chicago Style Clam Pizza");
         }
-        */
 
         /*
         * Let's not delete this, because we have

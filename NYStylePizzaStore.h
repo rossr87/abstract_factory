@@ -6,6 +6,7 @@
 #include "NYPizzaIngredientFactory.h"
 #include "Pizza.h"
 #include "CheesePizza.h"
+#include "ClamPizza.h"
 
 /*
  * I do the same as PizzaStore, except I have to actually implement
@@ -44,12 +45,10 @@ class NYStylePizzaStore : public PizzaStore {
             client_pizza = new CheesePizza(ny_ingredient_factory);
             client_pizza->set_name("New York Style Cheese Pizza");
         }
-        /*
-        else if {type == "clam"} {
+        else if (type == "clam") {
             client_pizza = new ClamPizza(ny_ingredient_factory);
-            client_pizza->set_name("New York Style Cheese Pizza");
+            client_pizza->set_name("New York Style Clam Pizza");
         }
-        */
 
         /*
         * Let's not delete this, because we have
