@@ -2,6 +2,8 @@
 #define PIZZA_H_INCLUDED
 
 #include <string>
+#include <memory>
+
 #include "Ingredients.h"
 
 class Pizza {
@@ -9,10 +11,10 @@ private:
     std::string name;
 
 protected:
-    Clam *clam;
-    Cheese *cheese;
-    Dough *dough;
-    Sauce *sauce;
+    std::unique_ptr<Clam> clam;
+    std::unique_ptr<Cheese> cheese;
+    std::unique_ptr<Dough> dough;
+    std::unique_ptr<Sauce> sauce;
 
 public:
     virtual void prepare() = 0;

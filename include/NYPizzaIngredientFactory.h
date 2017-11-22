@@ -7,10 +7,10 @@ class NYPizzaIngredientFactory : public PizzaIngredientFactory {
 public:
     NYPizzaIngredientFactory();
     ~NYPizzaIngredientFactory();
-    Clam *create_clam() override;
-    Cheese* create_cheese() override;
-    Dough* create_dough() override;
-    Sauce* create_sauce() override;
+    std::unique_ptr<Clam> create_clam() override;
+    std::unique_ptr<Cheese> create_cheese() override;
+    std::unique_ptr<Dough> create_dough() override;
+    std::unique_ptr<Sauce> create_sauce() override;
 };
 
 #endif // NYPIZZAINGREDIENTFACTORY_H_INCLUDED

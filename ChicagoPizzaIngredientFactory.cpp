@@ -11,22 +11,22 @@ ChicagoPizzaIngredientFactory::~ChicagoPizzaIngredientFactory()
     std::cout << "ChicagoPizzaIngredientFactory destroyed!\n";
 }
 
-Clam* ChicagoPizzaIngredientFactory::create_clam()
+std::unique_ptr<Clam> ChicagoPizzaIngredientFactory::create_clam()
 {
-    return new FrozenClam();
+    return std::make_unique<FrozenClam>();
 }
 
-Cheese* ChicagoPizzaIngredientFactory::create_cheese()
+std::unique_ptr<Cheese> ChicagoPizzaIngredientFactory::create_cheese()
 {
-    return new ReggianoCheese();
+    return  std::make_unique<ReggianoCheese>();
 }
 
-Dough* ChicagoPizzaIngredientFactory::create_dough()
+std::unique_ptr<Dough> ChicagoPizzaIngredientFactory::create_dough()
 {
-    return new ThinCrustDough();
+    return  std::make_unique<ThinCrustDough>();
 }
 
-Sauce* ChicagoPizzaIngredientFactory::create_sauce()
+std::unique_ptr<Sauce> ChicagoPizzaIngredientFactory::create_sauce()
 {
-    return new MarinaraSauce();
+    return std::make_unique<MarinaraSauce>();
 }

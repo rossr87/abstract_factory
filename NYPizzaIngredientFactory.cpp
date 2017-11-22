@@ -1,3 +1,5 @@
+#include <memory>
+
 #include "NYPizzaIngredientFactory.h"
 
 NYPizzaIngredientFactory::NYPizzaIngredientFactory()
@@ -10,22 +12,22 @@ NYPizzaIngredientFactory::~NYPizzaIngredientFactory()
     std::cout << "NYPizzaIngredientFactory destroyed!\n";
 }
 
-Clam* NYPizzaIngredientFactory::create_clam()
+std::unique_ptr<Clam> NYPizzaIngredientFactory::create_clam()
 {
-    return new FreshClam();
+    return std::make_unique<FreshClam>();
 }
 
-Cheese* NYPizzaIngredientFactory::create_cheese()
+std::unique_ptr<Cheese> NYPizzaIngredientFactory::create_cheese()
 {
-    return new MozarellaCheese();
+    return std::make_unique<MozarellaCheese>();
 }
 
-Dough* NYPizzaIngredientFactory::create_dough()
+std::unique_ptr<Dough> NYPizzaIngredientFactory::create_dough()
 {
-    return new ThickCrustDough();
+    return std::make_unique<ThickCrustDough>();
 }
 
-Sauce* NYPizzaIngredientFactory::create_sauce()
+std::unique_ptr<Sauce> NYPizzaIngredientFactory::create_sauce()
 {
-    return new PlumTomatoSauce();
+    return std::make_unique<PlumTomatoSauce>();
 }
