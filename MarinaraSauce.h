@@ -5,7 +5,7 @@
 
 class MarinaraSauce : public Sauce {
 public:
-    MarinaraSauce() { cout << "Marinara Sauce!" << endl;}
+    MarinaraSauce();
 };
 
 #endif // MARINARASAUCE_H_INCLUDED

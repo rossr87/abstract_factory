@@ -5,7 +5,7 @@
 
 class ThinCrustDough : public Dough {
 public:
-    ThinCrustDough() {cout << "Thin Crust Dough!" << endl;}
+    ThinCrustDough();
 };
 
 #endif // THINCRUSTDOUGH_H_INCLUDED

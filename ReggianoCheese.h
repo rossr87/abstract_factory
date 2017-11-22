@@ -3,12 +3,9 @@
 
 #include "Cheese.h"
 
-using std::cout;
-using std::endl;
-
 class ReggianoCheese : public Cheese {
 public:
-    ReggianoCheese() {cout << "Reggiano Cheese" << endl;}
+    ReggianoCheese();
 };
 
 #endif // REGGIANOCHEESE_H_INCLUDED

@@ -5,31 +5,20 @@
 #include "PizzaIngredientFactory.h"
 #include "Ingredients.h"
 
+/*
+ * Because we have separated the style of CheesePizza this class will be
+ * using the IngredientFactory, this class is oblivious to which kind of
+ * pizza (NY, Chicaco, ...) it is working with.
+ */
+
 class CheesePizza : public Pizza {
-public:
-    CheesePizza() { cout << "CheesePizza Creator" << endl;}
-    ~CheesePizza() { cout << "CheesePizza Destroyed!" << endl;}
-    /*
-     * Let's not engage in copying around loads of ingredient factories.
-     * It's not what C++ was built for!
-     */
+private:
     PizzaIngredientFactory *ingredient_factory = nullptr;
-
-    CheesePizza(PizzaIngredientFactory *stores_pizza_factory) {
-        //this->ingredient_factory = stores_pizza_factory;
-        ingredient_factory = stores_pizza_factory;
-    }
-
-    /*
-     * Notice that this class is ignorant of which kind of ingredient it will get?
-     */
-    void prepare() override {
-        cout << "Preparing: " << this->get_name() << endl;
-        clam = nullptr;
-        cheese = ingredient_factory->create_cheese();
-        dough = ingredient_factory->create_dough();
-        sauce = ingredient_factory->create_sauce();
-    }
+public:
+    CheesePizza();
+    ~CheesePizza();
+    CheesePizza(PizzaIngredientFactory *stores_pizza_factory);
+    void prepare() override;
 };
 
 #endif // CHEESEPIZZA_H_INCLUDED

@@ -1,13 +1,11 @@
 #ifndef MOZARELLACHEESE_H_INCLUDED
 #define MOZARELLACHEESE_H_INCLUDED
 
-using std::cout;
-using std::endl;
+#include "Cheese.h"
 
 class MozarellaCheese : public Cheese {
 public:
-    MozarellaCheese() {cout << "Mozarella Cheese" << endl;}
+    MozarellaCheese();
 };
-
 
 #endif // MOZARELLACHEESE_H_INCLUDED

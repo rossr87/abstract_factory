@@ -5,24 +5,12 @@
 
 class NYPizzaIngredientFactory : public PizzaIngredientFactory {
 public:
-    NYPizzaIngredientFactory() {
-        cout << "NYPizzaIngredientFactory created!" << endl;
-    }
-    ~NYPizzaIngredientFactory() {
-        cout << "NYPizzaIngredientFactory destroyed!" << endl;
-    }
-    Clam *create_clam() override {
-        return new FreshClam();
-    }
-    Cheese* create_cheese() override {
-        return new MozarellaCheese();
-    }
-    Dough* create_dough() override {
-        return new ThickCrustDough();
-    }
-    Sauce* create_sauce() override {
-        return new PlumTomatoSauce();
-    }
+    NYPizzaIngredientFactory();
+    ~NYPizzaIngredientFactory();
+    Clam *create_clam() override;
+    Cheese* create_cheese() override;
+    Dough* create_dough() override;
+    Sauce* create_sauce() override;
 };
 
 #endif // NYPIZZAINGREDIENTFACTORY_H_INCLUDED

@@ -1,14 +1,14 @@
 #ifndef FRESHCLAM_H_INCLUDED
 #define FRESHCLAM_H_INCLUDED
 
+#include <iostream>
+
 #include "Clam.h"
 
-using std::cout;
-using std::endl;
 
 class FreshClam : public Clam {
 public:
-    FreshClam() {cout << "Fresh Clam" << endl;}
+    FreshClam();
 };
 
 #endif // FRESHCLAM_H_INCLUDED
