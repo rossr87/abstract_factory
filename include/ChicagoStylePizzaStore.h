@@ -9,7 +9,7 @@
 
 class ChicagoStylePizzaStore : public PizzaStore {
 public:
-    Pizza *create_pizza(std::string type) override;
+    std::unique_ptr<Pizza> create_pizza(std::string type) override;
 };
 
 #endif // CHICAGOSTYLEPIZZASTORE_H_INCLUDED

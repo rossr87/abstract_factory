@@ -1,6 +1,8 @@
 #ifndef NYSTYLEPIZZASTORE_H_INCLUDED
 #define NYSTYLEPIZZASTORE_H_INCLUDED
 
+#include <memory>
+
 #include "PizzaStore.h"
 #include "PizzaIngredientFactory.h"
 #include "NYPizzaIngredientFactory.h"
@@ -14,7 +16,7 @@
  */
 class NYStylePizzaStore : public PizzaStore {
 protected:
-    Pizza* create_pizza(std::string type) override;
+    std::unique_ptr<Pizza> create_pizza(std::string type) override;
 };
 
 #endif // NYSTYLEPIZZASTORE_H_INCLUDED
