@@ -1,3 +1,5 @@
+#include <memory>
+
 #include "ClamPizza.h"
 
 ClamPizza::~ClamPizza()
@@ -9,7 +11,7 @@ ClamPizza::~ClamPizza()
  * Used to initialize the Pizza factory that is used for requesting
  * a clam Pizza.
  */
-ClamPizza::ClamPizza(PizzaIngredientFactory *stores_pizza_factory)
+ClamPizza::ClamPizza(std::shared_ptr<PizzaIngredientFactory> stores_pizza_factory)
 {
     ingredient_factory = stores_pizza_factory;
 }

@@ -1,5 +1,6 @@
 #ifndef CLAMPIZZA_H_INCLUDED
 #define CLAMPIZZA_H_INCLUDED
+#include <memory>
 
 #include "Pizza.h"
 #include "FreshClam.h"
@@ -7,11 +8,11 @@
 
 class ClamPizza : public Pizza {
 private:
-    PizzaIngredientFactory *ingredient_factory = nullptr;
+    std::shared_ptr<PizzaIngredientFactory> ingredient_factory;
 public:
     ClamPizza();
     ~ClamPizza();
-    ClamPizza(PizzaIngredientFactory *stores_pizza_factory);
+    ClamPizza(std::shared_ptr<PizzaIngredientFactory> stores_pizza_factory);
     void prepare();
 };
 

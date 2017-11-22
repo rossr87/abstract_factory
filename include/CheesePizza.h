@@ -1,5 +1,6 @@
 #ifndef CHEESEPIZZA_H_INCLUDED
 #define CHEESEPIZZA_H_INCLUDED
+#include <memory>
 
 #include "Pizza.h"
 #include "PizzaIngredientFactory.h"
@@ -13,11 +14,11 @@
 
 class CheesePizza : public Pizza {
 private:
-    PizzaIngredientFactory *ingredient_factory = nullptr;
+    std::shared_ptr<PizzaIngredientFactory> ingredient_factory;
 public:
     CheesePizza();
     ~CheesePizza();
-    CheesePizza(PizzaIngredientFactory *stores_pizza_factory);
+    CheesePizza(std::shared_ptr<PizzaIngredientFactory> stores_pizza_factory);
     void prepare() override;
 };
 

@@ -1,3 +1,5 @@
+#include <memory>
+
 #include "CheesePizza.h"
 
 CheesePizza::CheesePizza()
@@ -13,7 +15,7 @@ CheesePizza::~CheesePizza()
 /*
  * Used to set the Factory on initialization.
  */
-CheesePizza::CheesePizza(PizzaIngredientFactory *stores_pizza_factory) {
+CheesePizza::CheesePizza(std::shared_ptr<PizzaIngredientFactory> stores_pizza_factory) {
     ingredient_factory = stores_pizza_factory;
 }
 

@@ -5,7 +5,7 @@ std::unique_ptr<Pizza> NYStylePizzaStore::create_pizza(std::string type)
 {
     std::unique_ptr<Pizza> client_pizza;
 
-    PizzaIngredientFactory *ny_ingredient_factory = new NYPizzaIngredientFactory();
+    std::shared_ptr<PizzaIngredientFactory> ny_ingredient_factory = std::make_shared<NYPizzaIngredientFactory>();
 
     if (type == "cheese") {
         client_pizza = std::make_unique<CheesePizza>(ny_ingredient_factory);
