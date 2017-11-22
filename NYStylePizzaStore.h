@@ -13,7 +13,7 @@
  * the create_pizza interface.
  */
 class NYStylePizzaStore : public PizzaStore {
-public:
+protected:
     Pizza* create_pizza(std::string type) override;
 };
 

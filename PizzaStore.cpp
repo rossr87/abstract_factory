@@ -1,3 +1,4 @@
+#include "Pizza.h"
 #include "PizzaStore.h"
 
 Pizza* PizzaStore::order_pizza(std::string type)

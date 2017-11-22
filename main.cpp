@@ -1,9 +1,7 @@
 #include <iostream>
 
-#include "Pizza.h"
-#include "PizzaStore.h"
-#include "NYStylePizzaStore.h"
-#include "ChicagoStylePizzaStore.h"
+#include "Pizzas.h"
+#include "Stores.h"
 
 using namespace std;
 
