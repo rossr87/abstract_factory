@@ -7,10 +7,19 @@ C++.
 
 FACTORY METHOD
 
-A specific/concrete Pizza Store is created, e.g. NY, Chicago and returns a Pizza when a customer places an order. It is very easy to add a new
-Pizza Store's that behave uniformly. All that is needed is to inherit the abstract PizzaStore class and to implement the create_pizza member
-function. This is the *only* thing each concrete Pizza Store will do differently. Because all other behaviors are the same; slicing, boxing,
-baking etc.
+An (abstract) PizzaStore class is used to describe the behaviours of all PizzaStores. The only details that differ
+is the mechanism of Pizza creation, this is reflected by implementing different create_pizza methods in the subclasses of
+the PizzaStore.
 
 ABSTRACT FACTORY
-**Brief overview to do**
+
+Pizzas are built with the same "general" ingredients - dough, cheese, sauce, but different styles; NY, Chicago, etc.
+Pizza has:
+    Dough
+    Cheese
+    Sauce
+
+These components are provided by a PizzaIngredientFactory. There are two different PizzaIngredientFactory classes. Each
+one is responsible for providing the appropriate ingredients. When a Pizza is created, it is passed a reference
+to the appropriate PizzaIngredientFactory. The Pizza then calls on the methods in this PizzaIngredientFactory to provide
+the appropriate ingredients.
